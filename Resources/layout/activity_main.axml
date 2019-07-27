@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent">
+
+        <!-- Map -->
+        <fragment
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="com.google.android.gms.maps.SupportMapFragment"
+        />
+
+        <RelativeLayout
+            android:id="@+id/placeLayout"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+             android:background="@drawable/roundedges"
+
+            android:layout_marginTop="70dp">
+
+             <ImageView
+                android:id="@+id/blueball"
+                android:layout_centerVertical="true"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:src="@drawable/blueball"
+            />
+
+              <TextView
+                android:id="@+id/placeTextView"
+                android:text="Where to?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:maxLines="1"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/blueball"
+                android:layout_marginLeft="16dp"
+            />
+
+        </RelativeLayout>
+        
+         <ImageView
+            android:src="@drawable/center_marker"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:id="@+id/centerMarker"
+        />
+
+          <ImageButton
+            android:id="@+id/locationButton"
+                android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:layout_gravity="center|right"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/roundedges"
+                android:src="@drawable/place"
+                android:tint="@color/colorAccent"
+                
+            />
+
+         <Button
+            android:visibility="visible"
+            android:id="@+id/getDirectionsButton"
+            android:layout_height="40dp"
+            android:layout_width="200dp"
+            android:text="Get Directions"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="40dp"
+            android:textAllCaps="false"
+            android:drawableLeft="@drawable/direction"
+            android:paddingLeft="10dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:elevation="2dp"
+            android:translationZ="2dp"
+            android:stateListAnimator="@null"
+            android:background="@drawable/roundbutton"
+            android:textColor="@android:color/white"/>
+
+        <Button
+            android:visibility="invisible"
+            android:id="@+id/startTripButton"
+            android:layout_height="40dp"
+            android:layout_width="180dp"
+            android:text="Start Trip"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="40dp"
+            android:textAllCaps="false"
+            android:elevation="2dp"
+            android:translationZ="2dp"
+             android:stateListAnimator="@null"
+            android:background="@drawable/roundbutton"
+            android:textColor="@android:color/white"/>
+       
+
+    </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>
